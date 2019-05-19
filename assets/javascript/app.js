@@ -1,9 +1,11 @@
 //global variables
-//# correct
-//# incorrect
+var finalScore = 0;
+var possibleScore = 10;
+var intervalId;
+var time = 20;
+
 //time
 //value of checked answer for each question (for each) if value = 1, corrrect ++/10
-var questions = ["42", "hr", "pitch", "football", "mascot", "fame", "criminal", "baseballs", "announcer", "rookie"];
 //functions
 //timer (count down, if = 0, show results)
 //show results click function (submit )
@@ -24,48 +26,45 @@ var questions = ["42", "hr", "pitch", "football", "mascot", "fame", "criminal", 
 //user chooses answers to ten questions
 //user clicks submit
 //correct and incorrect answers are calculated and displayed
+$("#timer").hide();
+$("#quiz").hide();
+$("#results").hide();
 
-// console.log($('.demo:selected').val());  
-
-// $('.42').click(function() {
-//     if($('.42').is(':checked')) { console.log(val())}
-//  });
-
-// for (var i = 0; i < questions.length; i++) {
-//         var radioValue = $("input[name='42']:checked").val();
-//         console.log(radioValue);
-// }
-
-
-// var question1 = $('input[name="42"]');
-
-// question1.change(function() {
-//     var chosen = question1.filter(':checked');
-//     console.log(question1.val());
-
-//   });
-
-// $(document).ready(function() {
-//     var radios = $('input[name="42"]');
-//     radios.change(function() {
-//         var filtered = radios.filter(function() {
-//             return this.checked;
-//         })
-//     });
-//     // console.log(filtered.val());
-// })
-
-
-
-function submit() {
-    var radios = $('input[type="radio"]:checked');
-    var finalScore = 0;
-    var possibleScore = 58372;
+$("#start").on("click", function() {
+    $("#start").hide();
+    $("#quiz").show();
+    $("#timer").show();
     
+    function run() {
+        intervalId = setInterval(decrement, 1000);
+      }
+  
+      function decrement() {
+  
+        time--;
+  
+        $("#time-left").html("<h2>" + time + "</h2>");
+  
+        if (time === 0) {
+  
+          stop();
+        }
+      }
+
+      run();
+});
+
+$("#submit-results").on("click", function stop(){
+
+    //stop timer
+    //clear form div
+
+    var radios = $('input[type="radio"]:checked');
+       
     radios.each(function(index, radio) {
         var radioValue = parseInt(radio.value);
         finalScore += radioValue;
     });
 
     $('#finalScore').text(finalScore + '/' + possibleScore);
-}
+})
