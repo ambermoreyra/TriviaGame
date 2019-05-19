@@ -17,10 +17,11 @@
 
     <div class="container">
            <header class="text-center">Major League Baseball Trivia Game</header>
+           <div class="text-center" id="directions"></div>
            <div class="start text-center">
-           <button id="start" class="btn btn-primary center-block">Start Timer!</button> 
+           <button id="start" class="btn btn-primary center-block">Play Ball!</button> 
         </div>
-           <div id="timer" class="text-center">Time Remaining: <br> <h2><span id="time-left">60</span></h2></div>
+           <div id="timer" class="text-center"><span id="time-left"></span></div>
             <div id="quiz">
     <form class="text-center">
         <div class="question">
@@ -95,7 +96,7 @@
         <input type="radio" name="announcer" value="0"> Jack Buck <br>
     </div>
 
-        <div class="question">
+        <div class="question last">
         <p>What MLB rookie hit seven home runs in his first six games?</p>
         <input type="radio" name="rookie" value="0"> Ryan Braun <br>
         <input type="radio" name="rookie" value="1"> Trevor Story <br>
@@ -105,9 +106,15 @@
 
     </form>
 </div>
-<div id="results">
-<button id="submit-results">Submit Results</button>
-<div id="finalScore"></div>
+
+<!-- <div class="start text-center">
+    <button id="start" class="btn btn-primary center-block">Start Timer!</button> 
+ </div>
+    <div id="timer" class="text-center"><span id="time-left"></span></div> -->
+
+<div class="text-center">
+<button id="submit-results"class="btn btn-primary center-block">That's Game!</button>
+<div class="text-center" id="finalScore"></div>
 </div>
 </div>
 
