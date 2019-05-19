@@ -16,13 +16,14 @@
 
     <div class="container">
             <header class="text-center">Major League Baseball Trivia Game</header>
+            <div id="time-left"></div>
     <form class="text-center">
         <div class="question">
         <p>Every Major League Baseball team retired uniform number 42 to honor what barrier-breaking player?</p>
-        <input type="radio" name="42" value="0"> Hank Aaron <br>
-        <input type="radio" name="42" value="1"> Jackie Robinson <br>
-        <input type="radio" name="42" value="0"> Willie Mays <br>
-        <input type="radio" name="42" value="0"> Mickey Mantle 
+        <input type="radio" class="42" name="42" value="0"> Hank Aaron <br>
+        <input type="radio" class="42" name="42" value="1"> Jackie Robinson <br>
+        <input type="radio" class="42" name="42" value="0"> Willie Mays <br>
+        <input type="radio" class="42" name="42" value="0"> Mickey Mantle <br>
     </div>
 
     <div class="question">
@@ -96,8 +97,11 @@
         <input type="radio" name="rookie" value="0"> Ichiro Suzuki <br>
         <input type="radio" name="rookie" value="0"> Albert Pujols <br>
     </div>
-
-    </div>
     </form>
+<button href="" onclick="submit()">Submit Results</button>
+<div id="finalScore"></div>
+</div>
+
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
