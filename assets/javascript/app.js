@@ -30,7 +30,7 @@ $("#start").on("click", function () {
     $("#submit-results").show();
     $("#time-left").empty();
     finalScore = 0;
-    var time = 30;
+    var time = 120;
 
     $('input:checked').removeAttr('checked');
 
