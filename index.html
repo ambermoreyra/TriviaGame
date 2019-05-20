@@ -1,123 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Play Ball!</title>
 </head>
+
 <body>
-    
 
     <div class="container">
-           <header class="text-center">Major League Baseball Trivia Game</header>
-           <div class="text-center" id="directions"></div>
-           <div class="start text-center">
-           <button id="start" class="btn btn-primary center-block">Play Ball!</button> 
+
+        <header class="text-center">Major League Baseball Trivia Game</header>
+
+        <div class="text-center" id="directions"></div>
+
+        <div class="text-center">
+            <button id="start" class="btn btn-primary center-block">Play Ball!</button>
         </div>
-           <div id="timer" class="text-center"><span id="time-left"></span></div>
-            <div id="quiz">
-    <form class="text-center">
-        <div class="question">
-        <p>Every Major League Baseball team retired uniform number 42 to honor what barrier-breaking player?</p>
-        <input type="radio" class="42" name="42" value="0"> Hank Aaron <br>
-        <input type="radio" class="42" name="42" value="1"> Jackie Robinson <br>
-        <input type="radio" class="42" name="42" value="0"> Willie Mays <br>
-        <input type="radio" class="42" name="42" value="0"> Mickey Mantle <br>
+
+        <div id="timer" class="text-center"><span id="time-left"></span></div>
+
+        <div id="quiz">
+            <form class="text-center">
+                <div class="question">
+                    <p>Every Major League Baseball team retired uniform number 42 to honor what barrier-breaking player?
+                    </p>
+                    <input type="radio" class="42" name="42" value="0"> Hank Aaron <br>
+                    <input type="radio" class="42" name="42" value="1"> Jackie Robinson <br>
+                    <input type="radio" class="42" name="42" value="0"> Willie Mays <br>
+                    <input type="radio" class="42" name="42" value="0"> Mickey Mantle <br>
+                </div>
+
+                <div class="question">
+                    <p>Who holds the record for the most home runs in a single major league baseball season?</p>
+                    <input type="radio" name="hr" value="1"> Barry Bonds <br>
+                    <input type="radio" name="hr" value="0"> Babe Ruth <br>
+                    <input type="radio" name="hr" value="0"> Mark McGwire <br>
+                    <input type="radio" name="hr" value="0"> Sammy Sosa <br>
+                </div>
+
+                <div class="question">
+                    <p>What is the most common type of pitch thrown by pitchers in baseball?</p>
+                    <input type="radio" name="pitch" value="0"> Curveball <br>
+                    <input type="radio" name="pitch" value="0"> Changeup <br>
+                    <input type="radio" name="pitch" value="0"> Splitter <br>
+                    <input type="radio" name="pitch" value="1"> Fastball <br>
+                </div>
+
+                <div class="question">
+                    <p>Who is the only athlete ever to play in a Super Bowl and a World Series?</p>
+                    <input type="radio" name="football" value="0"> Bo Jackson <br>
+                    <input type="radio" name="football" value="1"> Deion Sanders <br>
+                    <input type="radio" name="football" value="0"> Tim Tebow <br>
+                    <input type="radio" name="football" value="0"> Jim Thorpe <br>
+                </div>
+
+                <div class="question">
+                    <p>What type of animal is the mascot for the Oakland Athletics baseball team?</p>
+                    <input type="radio" name="mascot" value="0"> Kangaroo <br>
+                    <input type="radio" name="mascot" value="0"> Shark <br>
+                    <input type="radio" name="mascot" value="1"> Elephant <br>
+                    <input type="radio" name="mascot" value="0"> Lion <br>
+                </div>
+
+                <div class="question">
+                    <p>Where is the baseball hall of fame located?</p>
+                    <input type="radio" name="fame" value="1"> Cooperstown, NY <br>
+                    <input type="radio" name="fame" value="0"> Pasadena, CA <br>
+                    <input type="radio" name="fame" value="0"> Louisville, KY <br>
+                    <input type="radio" name="fame" value="0"> Dyersville, IA <br>
+                </div>
+
+                <div class="question">
+                    <p>What famous criminal was once a professional baseball player?</p>
+                    <input type="radio" name="criminal" value="0"> Lucky Luciano <br>
+                    <input type="radio" name="criminal" value="0"> Al Capone <br>
+                    <input type="radio" name="criminal" value="0"> Ted Bundy <br>
+                    <input type="radio" name="criminal" value="1"> John Dillinger <br>
+                </div>
+
+                <div class="question">
+                    <p>How many baseballs are used during a typical Major League Baseball game?</p>
+                    <input type="radio" name="baseballs" value="0"> 200 <br>
+                    <input type="radio" name="baseballs" value="0"> 150 <br>
+                    <input type="radio" name="baseballs" value="1"> 100 <br>
+                    <input type="radio" name="baseballs" value="0"> 50 <br>
+                </div>
+
+                <div class="question">
+                    <p>What baseball announcer is known as "Mr. Baseball"?</p>
+                    <input type="radio" name="announcer" value="1"> Bob Uecker <br>
+                    <input type="radio" name="announcer" value="0"> Vin Scully <br>
+                    <input type="radio" name="announcer" value="0"> Harry Caray <br>
+                    <input type="radio" name="announcer" value="0"> Jack Buck <br>
+                </div>
+
+                <div class="question">
+                    <p>What MLB rookie hit seven home runs in his first six games?</p>
+                    <input type="radio" name="rookie" value="0"> Ryan Braun <br>
+                    <input type="radio" name="rookie" value="1"> Trevor Story <br>
+                    <input type="radio" name="rookie" value="0"> Ichiro Suzuki <br>
+                    <input type="radio" name="rookie" value="0"> Albert Pujols <br>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="text-center">
+            <button id="submit-results" class="btn btn-primary center-block">That's Game!</button>
+            <div class="text-center" id="finalScore"></div>
+        </div>
+
+        <div class="text-center">
+            <button id="playBall" class="btn btn-primary center-block">Extra Innings?</button>
+        </div>
+
     </div>
-
-    <div class="question">
-        <p>Who holds the record for the most home runs in a single major league baseball season?</p>
-        <input type="radio" name="hr" value="1"> Barry Bonds <br>
-        <input type="radio" name="hr" value="0"> Babe Ruth <br>
-        <input type="radio" name="hr" value="0"> Mark McGwire <br>
-        <input type="radio" name="hr" value="0"> Sammy Sosa <br>
-    </div>
-
-        <div class="question">
-        <p>What is the most common type of pitch thrown by pitchers in baseball?</p>
-        <input type="radio" name="pitch" value="0"> Curveball <br>
-        <input type="radio" name="pitch" value="0"> Changeup <br>
-        <input type="radio" name="pitch" value="0"> Splitter <br>
-        <input type="radio" name="pitch" value="1"> Fastball <br>
-    </div>
-
-        <div class="question">
-        <p>Who is the only athlete ever to play in a Super Bowl and a World Series?</p>
-        <input type="radio" name="football" value="0"> Bo Jackson <br>
-        <input type="radio" name="football" value="1"> Deion Sanders <br>
-        <input type="radio" name="football" value="0"> Tim Tebow <br>
-        <input type="radio" name="football" value="0"> Jim Thorpe <br>
-    </div>
-
-        <div class="question">
-        <p>What type of animal is the mascot for the Oakland Athletics baseball team?</p>
-        <input type="radio" name="mascot" value="0"> Kangaroo <br>
-        <input type="radio" name="mascot" value="0"> Shark <br>
-        <input type="radio" name="mascot" value="1"> Elephant <br>
-        <input type="radio" name="mascot" value="0"> Lion <br>
-    </div>
-
-        <div class="question">
-        <p>Where is the baseball hall of fame located?</p>
-        <input type="radio" name="fame" value="1"> Cooperstown, NY <br>
-        <input type="radio" name="fame" value="0"> Pasadena, CA <br>
-        <input type="radio" name="fame" value="0"> Louisville, KY <br>
-        <input type="radio" name="fame" value="0"> Dyersville, IA <br>
-    </div>
-
-        <div class="question">
-        <p>What famous criminal was once a professional baseball player?</p>
-        <input type="radio" name="criminal" value="0"> Lucky Luciano <br>
-        <input type="radio" name="criminal" value="0"> Al Capone <br>
-        <input type="radio" name="criminal" value="0"> Ted Bundy <br>
-        <input type="radio" name="criminal" value="1"> John Dillinger <br>
-    </div>
-
-        <div class="question">
-        <p>How many baseballs are used during a typical Major League Baseball game?</p>
-        <input type="radio" name="baseballs" value="0"> 200 <br>
-        <input type="radio" name="baseballs" value="0"> 150 <br>
-        <input type="radio" name="baseballs" value="1"> 100 <br>
-        <input type="radio" name="baseballs" value="0"> 50 <br>
-    </div>
-
-        <div class="question">
-        <p>What baseball announcer is known as "Mr. Baseball"?</p>
-        <input type="radio" name="announcer" value="1"> Bob Uecker <br>
-        <input type="radio" name="announcer" value="0"> Vin Scully <br>
-        <input type="radio" name="announcer" value="0"> Harry Caray <br>
-        <input type="radio" name="announcer" value="0"> Jack Buck <br>
-    </div>
-
-        <div class="question last">
-        <p>What MLB rookie hit seven home runs in his first six games?</p>
-        <input type="radio" name="rookie" value="0"> Ryan Braun <br>
-        <input type="radio" name="rookie" value="1"> Trevor Story <br>
-        <input type="radio" name="rookie" value="0"> Ichiro Suzuki <br>
-        <input type="radio" name="rookie" value="0"> Albert Pujols <br>
-    </div>
-
-    </form>
-</div>
-
-<!-- <div class="start text-center">
-    <button id="start" class="btn btn-primary center-block">Start Timer!</button> 
- </div>
-    <div id="timer" class="text-center"><span id="time-left"></span></div> -->
-
-<div class="text-center">
-<button id="submit-results"class="btn btn-primary center-block">That's Game!</button>
-<div class="text-center" id="finalScore"></div>
-</div>
-</div>
 
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
+
 </html>
